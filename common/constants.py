@@ -1,0 +1,5 @@
+# GPIO 
+
+# CONSTANTS
+HIGH = 1
+LOW = 0

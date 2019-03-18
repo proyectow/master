@@ -1,0 +1,14 @@
+{
+    "TEST":{
+        "temperature_umbral":[30,30],
+        "humidity_umbral":[30,30],
+        "schedule_ligth":{
+            "phase1":{},
+            "phase2":{}
+        },
+        "schedule_ligth":{
+            "phase1":{},
+            "phase2":{}
+        }
+    }
+}
