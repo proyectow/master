@@ -25,20 +25,20 @@ def handler(
     params = read_json_file('config.json')
     # primer parametro HIGh temp_umbral[0] = umbral por arriba
     temp_umbral, hum_umbral = get_params(plt, params)
-    
+
     print('Temp min:', temp_umbral[0],
-              'Temp max:', temp_umbral[1])
+          'Temp max:', temp_umbral[1])
 
     print('Hum min:', hum_umbral[0],
-              'Hum max:', hum_umbral[1])
-    
+          'Hum max:', hum_umbral[1])
+
     th.eval_climatization(
         temp_umbral[0],
         temp_umbral[1],
         hum_umbral[0],
         hum_umbral[1]
     )
-    
+
     # Read Temp/Hum
     # humidity, temp = read_temphum()
     # Eval Temp/Hum

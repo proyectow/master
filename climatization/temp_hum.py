@@ -17,9 +17,9 @@ def eval_climatization(
         UMBRAL_HUM_H
 ):
     sensor = Adafruit_DHT.DHT22
-    while 1:     
+    while 1:
         humidity, temperature = Adafruit_DHT.read_retry(sensor, gpioTH)
-        print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
+        print('Temp={0:0.1f}*  Hum={1:0.1f}%'.format(temperature, humidity))
         '''
         # Llamar a la funcion que activa o desactiva los ventiladores
         if UMBRAL_TEMP_L > temperature:
