@@ -1,8 +1,7 @@
 import json
 import argparse
 
-from Adafruit_Python_DHT import Adafruit_DHT as dht
-from climatization import temp_hum as th
+from Adafruit_Python_DHT.examples import AdafruitDHT as th
 
 
 def read_json_file(dataset_path):
@@ -20,7 +19,7 @@ def get_params(type_weed, params):
 
 
 def handler(
-    plt
+    plt: str
 ) -> None:
     params = read_json_file('config.json')
     # primer parametro HIGh temp_umbral[0] = umbral por arriba
@@ -31,17 +30,12 @@ def handler(
 
     print('Hum min:', hum_umbral[0],
           'Hum max:', hum_umbral[1])
-
     th.eval_climatization(
         temp_umbral[0],
         temp_umbral[1],
         hum_umbral[0],
-        hum_umbral[1]
+        hum_umbral[1]    
     )
-
-    # Read Temp/Hum
-    # humidity, temp = read_temphum()
-    # Eval Temp/Hum
 
 if __name__ == '__main__':
 
