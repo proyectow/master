@@ -22,7 +22,7 @@ def handler(
     plt: str
 ) -> None:
     params = read_json_file('config.json')
-    # primer parametro HIGh temp_umbral[0] = umbral por arriba
+
     temp_umbral, hum_umbral = get_params(plt, params)
 
     print('Temp min:', temp_umbral[0],
@@ -30,6 +30,7 @@ def handler(
 
     print('Hum min:', hum_umbral[0],
           'Hum max:', hum_umbral[1])
+
     th.eval_climatization(
         temp_umbral[0],
         temp_umbral[1],
